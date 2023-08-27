@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Your Ticket Purchase Confirmation</title>
+</head>
+<body>
+<h2>Your Ticket Purchase Confirmation</h2>
+<p>Dear [[${user.firstName}]],</p>
+
+<p>Thank you for purchasing tickets! Here are the details of your purchase:</p>
+
+<h3>Ticket Details</h3>
+
+<table border="1" cellpadding="10">
+  <tr>
+    <th>Movie</th>
+    <th>Time</th>
+    <th>Movie Hall number</th>
+    <th>Seat Number</th>
+    <th>Row Number</th>
+  </tr>
+  <tr th:each="booking : ${bookings}">
+    <td th:text="${booking.movieSession.movie.movieTitle}"></td>
+    <td th:text="${booking.movieSession.startsAt}"></td>
+    <td th:text="${booking.movieSession.movieHall.movieHallNumber}"></td>
+    <td th:text="${booking.seat.seatNumber}"></td>
+    <td th:text="${booking.seat.rowNumber}"></td>
+  </tr>
+</table>
+
+<p>Total Price: [[${totalPrice}]]</p>
+
+<p>Payment Method: [[${paymentMethod}]]</p>
+
+<p>If you have any questions or need assistance, please contact our customer support at [Customer Support Email/Phone].</p>
+
+<p>Enjoy the movie!</p>
+
+<p>Best regards,<br>TitanCinema</p>
+</body>
+</html>

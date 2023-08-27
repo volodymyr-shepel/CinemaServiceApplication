@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Reservation Expired</h1>
+    </div>
+    <div class="content">
+        <p>Dear <span th:text="${username}"></span>,</p>
+        <p>Your reservation has expired. We regret to inform you that the reservation you made has passed its expiration time and has been automatically canceled.</p>
+        <p>If you still wish to make a reservation, please visit our website again.</p>
+        <p>Thank you for considering our services!</p>
+    </div>
+</div>
+</body>
+</html>
