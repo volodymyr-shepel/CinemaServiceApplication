@@ -2,6 +2,7 @@ package com.example.movieApp.registration;
 
 import com.example.movieApp.appUser.AppUser;
 import com.example.movieApp.appUser.AppUserRepository;
+import com.example.movieApp.appUser.AppUserRole;
 import com.example.movieApp.appUser.AppUserService;
 import com.example.movieApp.email.EmailService;
 import com.example.movieApp.excepitons.InvalidEmailFormatException;
@@ -71,7 +72,7 @@ public class RegistrationService {
 
         validateCredentials(request);
 
-        AppUser newUser = appUserService.createUser(request);
+        AppUser newUser = appUserService.createUser(request, AppUserRole.USER);
 
         appUserRepository.save(newUser);
 

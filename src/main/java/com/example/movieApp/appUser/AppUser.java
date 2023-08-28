@@ -1,6 +1,6 @@
 package com.example.movieApp.appUser;
 
-import com.example.movieApp.entities.MovieSession;
+
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

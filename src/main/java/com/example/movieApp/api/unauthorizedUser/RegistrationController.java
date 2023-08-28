@@ -1,5 +1,7 @@
-package com.example.movieApp.registration;
+package com.example.movieApp.api.unauthorizedUser;
 
+import com.example.movieApp.registration.RegistrationRequest;
+import com.example.movieApp.registration.RegistrationService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;

@@ -11,14 +11,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/api/user")
-public class UserController {
+public class UserApiController {
 
     private final UserApiReservationService userApiReservationService;
 
     private final UserApiPurchaseService userApiPurchaseService;
 
     @Autowired
-    public UserController(UserApiReservationService userApiReservationService, UserApiPurchaseService userApiPurchaseService) {
+    public UserApiController(UserApiReservationService userApiReservationService, UserApiPurchaseService userApiPurchaseService) {
         this.userApiReservationService = userApiReservationService;
         this.userApiPurchaseService = userApiPurchaseService;
     }

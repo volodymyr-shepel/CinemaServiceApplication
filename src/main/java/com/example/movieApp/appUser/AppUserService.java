@@ -1,5 +1,6 @@
 package com.example.movieApp.appUser;
 
+import com.example.movieApp.entities.SeatStatus;
 import com.example.movieApp.registration.RegistrationRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -14,14 +15,14 @@ public class AppUserService {
         this.bCryptPasswordEncoder = bCryptPasswordEncoder;
     }
 
-    public AppUser createUser(RegistrationRequest request) {
+    public AppUser createUser(RegistrationRequest request, AppUserRole appUserRole) {
         String encodedPassword = bCryptPasswordEncoder.encode(request.getPassword());
         return new AppUser(
                 request.getFirstName(),
                 request.getLastName(),
                 request.getEmail(),
                 encodedPassword,
-                AppUserRole.USER
+                appUserRole
         );
     }
 }

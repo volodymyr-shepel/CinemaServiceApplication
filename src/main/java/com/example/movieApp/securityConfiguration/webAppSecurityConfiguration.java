@@ -48,6 +48,7 @@ public class webAppSecurityConfiguration {
                 .authorizeHttpRequests((authz) -> authz
                         .requestMatchers("/api/admin/**").hasAuthority(AppUserRole.ADMIN.name())
                         .requestMatchers("/api/user/**").hasAuthority(AppUserRole.USER.name())
+                        .requestMatchers("/api/passwordManager/**").authenticated()
                         .requestMatchers("/api/public/**").permitAll()
                         .requestMatchers("/api/v1/authentication/**").permitAll()
                         .requestMatchers("/api/v1/registration/**").permitAll()
