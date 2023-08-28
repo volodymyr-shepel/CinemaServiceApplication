@@ -1,6 +1,6 @@
 package com.example.movieApp.api.admin.manageUsers;
 
-import com.example.movieApp.appUser.AppUser;
+import com.example.movieApp.entities.appUser.AppUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

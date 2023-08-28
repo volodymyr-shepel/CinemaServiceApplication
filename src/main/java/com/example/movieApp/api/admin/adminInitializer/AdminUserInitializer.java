@@ -1,11 +1,10 @@
 package com.example.movieApp.api.admin.adminInitializer;
 
-import com.example.movieApp.appUser.AppUser;
-import com.example.movieApp.appUser.AppUserRepository;
-import com.example.movieApp.appUser.AppUserRole;
-import com.example.movieApp.appUser.AppUserService;
+import com.example.movieApp.entities.appUser.AppUser;
+import com.example.movieApp.entities.appUser.AppUserRepository;
+import com.example.movieApp.entities.appUser.AppUserRole;
+import com.example.movieApp.entities.appUser.AppUserService;
 import com.example.movieApp.registration.RegistrationRequest;
-import com.example.movieApp.registration.RegistrationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

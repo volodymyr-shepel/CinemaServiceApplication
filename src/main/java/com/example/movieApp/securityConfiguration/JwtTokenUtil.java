@@ -1,6 +1,6 @@
 package com.example.movieApp.securityConfiguration;
 
-import com.example.movieApp.appUser.AppUser;
+import com.example.movieApp.entities.appUser.AppUser;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

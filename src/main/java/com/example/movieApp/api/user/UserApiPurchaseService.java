@@ -1,6 +1,6 @@
 package com.example.movieApp.api.user;
 
-import com.example.movieApp.appUser.AppUser;
+import com.example.movieApp.entities.appUser.AppUser;
 import com.example.movieApp.email.EmailService;
 import com.example.movieApp.entities.Booking;
 import com.example.movieApp.entities.SeatStatus;

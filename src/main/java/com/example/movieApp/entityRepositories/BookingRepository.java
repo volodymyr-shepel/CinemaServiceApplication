@@ -1,20 +1,15 @@
 package com.example.movieApp.entityRepositories;
 
-import com.example.movieApp.appUser.AppUser;
+import com.example.movieApp.entities.appUser.AppUser;
 import com.example.movieApp.entities.Booking;
 import com.example.movieApp.entities.SeatStatus;
-import com.example.movieApp.entities.Ticket;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Set;
 
 @Repository
 public interface BookingRepository extends JpaRepository<Booking,Long> {

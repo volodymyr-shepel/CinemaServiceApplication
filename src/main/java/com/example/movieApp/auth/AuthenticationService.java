@@ -1,7 +1,7 @@
 package com.example.movieApp.auth;
 
-import com.example.movieApp.appUser.AppUser;
-import com.example.movieApp.appUser.AppUserRepository;
+import com.example.movieApp.entities.appUser.AppUser;
+import com.example.movieApp.entities.appUser.AppUserRepository;
 import com.example.movieApp.securityConfiguration.JwtTokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

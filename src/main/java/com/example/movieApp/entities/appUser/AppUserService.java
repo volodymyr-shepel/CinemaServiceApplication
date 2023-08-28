@@ -1,6 +1,5 @@
-package com.example.movieApp.appUser;
+package com.example.movieApp.entities.appUser;
 
-import com.example.movieApp.entities.SeatStatus;
 import com.example.movieApp.registration.RegistrationRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

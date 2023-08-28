@@ -7,8 +7,8 @@ public class RegistrationRequest {
     private String firstName;
     private String lastName;
     @Email
-    private final String email;
-    private final String password;
+    private String email;
+    private String password;
 
     public String getFirstName() {
         return firstName;
@@ -31,6 +31,9 @@ public class RegistrationRequest {
         this.lastName = lastName;
         this.email = email;
         this.password = password;
+    }
+    public RegistrationRequest(){
+
     }
 
     public RegistrationRequest(String email, String password) {

@@ -1,6 +1,6 @@
 package com.example.movieApp.api.passwordManager;
 
-import com.example.movieApp.appUser.AppUserRepository;
+import com.example.movieApp.entities.appUser.AppUserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

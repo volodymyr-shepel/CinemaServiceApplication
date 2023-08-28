@@ -1,4 +1,4 @@
-package com.example.movieApp.appUser;
+package com.example.movieApp.entities.appUser;
 
 public enum AppUserRole {
     USER,

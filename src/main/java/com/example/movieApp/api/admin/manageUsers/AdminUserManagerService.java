@@ -1,15 +1,14 @@
 package com.example.movieApp.api.admin.manageUsers;
 
-import com.example.movieApp.appUser.AppUser;
-import com.example.movieApp.appUser.AppUserRepository;
-import com.example.movieApp.appUser.AppUserRole;
+import com.example.movieApp.entities.appUser.AppUser;
+import com.example.movieApp.entities.appUser.AppUserRepository;
+import com.example.movieApp.entities.appUser.AppUserRole;
 import com.example.movieApp.excepitons.InstanceNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class AdminUserManagerService {

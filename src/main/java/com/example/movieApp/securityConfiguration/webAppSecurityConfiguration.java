@@ -1,8 +1,8 @@
 package com.example.movieApp.securityConfiguration;
 
-import com.example.movieApp.appUser.AppUserDetailsService;
-import com.example.movieApp.appUser.AppUserRepository;
-import com.example.movieApp.appUser.AppUserRole;
+import com.example.movieApp.entities.appUser.AppUserDetailsService;
+import com.example.movieApp.entities.appUser.AppUserRepository;
+import com.example.movieApp.entities.appUser.AppUserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

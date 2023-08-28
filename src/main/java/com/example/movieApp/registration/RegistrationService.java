@@ -1,9 +1,9 @@
 package com.example.movieApp.registration;
 
-import com.example.movieApp.appUser.AppUser;
-import com.example.movieApp.appUser.AppUserRepository;
-import com.example.movieApp.appUser.AppUserRole;
-import com.example.movieApp.appUser.AppUserService;
+import com.example.movieApp.entities.appUser.AppUser;
+import com.example.movieApp.entities.appUser.AppUserRepository;
+import com.example.movieApp.entities.appUser.AppUserRole;
+import com.example.movieApp.entities.appUser.AppUserService;
 import com.example.movieApp.email.EmailService;
 import com.example.movieApp.excepitons.InvalidEmailFormatException;
 import com.example.movieApp.excepitons.InvalidPasswordFormatException;
@@ -15,13 +15,8 @@ import com.example.movieApp.registration.confirmationToken.ConfirmationTokenServ
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 
 @Service

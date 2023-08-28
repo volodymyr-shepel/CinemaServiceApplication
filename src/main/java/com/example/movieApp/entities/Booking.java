@@ -1,6 +1,6 @@
 package com.example.movieApp.entities;
 
-import com.example.movieApp.appUser.AppUser;
+import com.example.movieApp.entities.appUser.AppUser;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 

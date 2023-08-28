@@ -5,6 +5,8 @@ import jakarta.validation.ValidationException;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -24,7 +26,8 @@ public class GlobalExceptionHandler  {
             SeatAlreadyTakenException.class,
             ActiveReservationException.class,
             InvalidReservationTimeException.class,
-            ValidationException.class
+            ValidationException.class,
+            UsernameNotFoundException.class
 
     })
     public ResponseEntity<Object> handleCustomExceptions(RuntimeException e){

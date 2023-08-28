@@ -1,11 +1,7 @@
 package com.example.movieApp.entities;
 
-import com.example.movieApp.appUser.AppUser;
-import com.example.movieApp.entities.MovieSession;
+import com.example.movieApp.entities.appUser.AppUser;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotNull;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import java.math.BigDecimal;
 

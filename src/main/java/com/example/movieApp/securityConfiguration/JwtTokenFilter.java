@@ -1,6 +1,6 @@
 package com.example.movieApp.securityConfiguration;
 
-import com.example.movieApp.appUser.AppUserDetailsService;
+import com.example.movieApp.entities.appUser.AppUserDetailsService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

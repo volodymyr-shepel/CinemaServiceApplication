@@ -1,4 +1,4 @@
-package com.example.movieApp.appUser;
+package com.example.movieApp.entities.appUser;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -19,7 +19,7 @@ public class AppUserDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String email)
-            throws UsernameNotFoundException {
+    {
         return appUserRepository.findByEmail(email)
                 .orElseThrow(() ->
                         new UsernameNotFoundException(

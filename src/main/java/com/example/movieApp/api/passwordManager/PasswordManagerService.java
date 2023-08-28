@@ -1,8 +1,7 @@
 package com.example.movieApp.api.passwordManager;
 
-import com.example.movieApp.appUser.AppUser;
-import com.example.movieApp.appUser.AppUserRepository;
-import com.example.movieApp.excepitons.InstanceNotFoundException;
+import com.example.movieApp.entities.appUser.AppUser;
+import com.example.movieApp.entities.appUser.AppUserRepository;
 import com.example.movieApp.registration.PasswordValidator;
 import com.example.movieApp.securityConfiguration.PasswordEncoder;
 import jakarta.transaction.Transactional;

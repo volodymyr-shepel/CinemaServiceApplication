@@ -1,19 +1,14 @@
 package com.example.movieApp.scheduler;
 
-import com.example.movieApp.appUser.AppUser;
+import com.example.movieApp.entities.appUser.AppUser;
 import com.example.movieApp.email.EmailService;
 import com.example.movieApp.entities.Booking;
 import com.example.movieApp.entities.SeatStatus;
 import com.example.movieApp.entityRepositories.BookingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;

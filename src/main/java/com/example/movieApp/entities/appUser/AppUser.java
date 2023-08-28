@@ -1,7 +1,8 @@
-package com.example.movieApp.appUser;
+package com.example.movieApp.entities.appUser;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -108,9 +109,13 @@ public class AppUser implements UserDetails {
     @Id
     @GeneratedValue
     private Long userId;
+
     private String firstName;
     private String lastName;
+    @NotBlank(message = "email be blank")
     private String email;
+
+    @NotBlank(message = "password can not be blank")
     private String password;
     @Enumerated(EnumType.STRING)
     private AppUserRole appUserRole;

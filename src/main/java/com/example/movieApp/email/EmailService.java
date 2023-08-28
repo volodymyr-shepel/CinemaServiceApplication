@@ -1,5 +1,5 @@
 package com.example.movieApp.email;
-import com.example.movieApp.appUser.AppUser;
+import com.example.movieApp.entities.appUser.AppUser;
 import com.example.movieApp.entities.Booking;
 import org.thymeleaf.TemplateEngine;
 import jakarta.mail.MessagingException;
