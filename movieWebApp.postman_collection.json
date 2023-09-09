@@ -78,7 +78,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\" : \"fullcontrol1337@gmail.com\",\r\n    \"password\" : \"NarutoUzumaki123!\"\r\n}",
+							"raw": "{\r\n    \"email\" : \"example@gmail.com\",\r\n    \"password\" : \"P@ssw0rd123!\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -115,7 +115,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "",
+									"value": "authorizationAdminToken",
 									"type": "string"
 								}
 							]
@@ -156,7 +156,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlRpdGFuQ2luZW1hIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn1dLCJpYXQiOjE2OTMyMzM2MDYsImV4cCI6MTY5MzMyMDAwNn0.46S-DaMqHwwMFjlBm19YtKOo_alGQLmBy4eRpd0qu3r_DvgZjbQBTDFnCl5AOngziw9vpnyp42BUL5aVyhyDOw",
+									"value": "authorizationAdminToken",
 									"type": "string"
 								}
 							]
@@ -164,7 +164,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/admin/movie/removeMovie/52",
+							"raw": "http://localhost:8080/api/admin/movie/removeMovie/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -175,7 +175,7 @@
 								"admin",
 								"movie",
 								"removeMovie",
-								"52"
+								"1"
 							]
 						}
 					},
@@ -189,7 +189,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaGVwZWx2b3ZhMTUwODIwMDNAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiQURNSU4ifV0sImlhdCI6MTY5MzE1NjAwNywiZXhwIjoxNjkzMjQyNDA3fQ.A8YoWeXixx-HfSWkFU035nOzkn9ejLgjuwfxvBtcEmjd9E3ldtgTDAUB1wqFCAf7V7s5rL1vPipURcb4DDaz-Q",
+									"value": "authorizationAdminToken",
 									"type": "string"
 								}
 							]
@@ -206,7 +206,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/admin/movie/updateMovie/2",
+							"raw": "http://localhost:8080/api/admin/movie/updateMovie/1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -217,7 +217,7 @@
 								"admin",
 								"movie",
 								"updateMovie",
-								"2"
+								"1"
 							]
 						}
 					},
@@ -236,7 +236,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "",
+									"value": "authorizationAdminToken",
 									"type": "string"
 								}
 							]
@@ -268,7 +268,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "",
+									"value": "authorizationAdminToken",
 									"type": "string"
 								}
 							]
@@ -309,7 +309,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaGVwZWx2b3ZhMTUwODIwMDNAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiQURNSU4ifV0sImlhdCI6MTY5MzE1NjAwNywiZXhwIjoxNjkzMjQyNDA3fQ.A8YoWeXixx-HfSWkFU035nOzkn9ejLgjuwfxvBtcEmjd9E3ldtgTDAUB1wqFCAf7V7s5rL1vPipURcb4DDaz-Q",
+									"value": "authorizationAdminToken",
 									"type": "string"
 								}
 							]
@@ -347,7 +347,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlRpdGFuQ2luZW1hIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn1dLCJpYXQiOjE2OTMyMzM2MDYsImV4cCI6MTY5MzMyMDAwNn0.46S-DaMqHwwMFjlBm19YtKOo_alGQLmBy4eRpd0qu3r_DvgZjbQBTDFnCl5AOngziw9vpnyp42BUL5aVyhyDOw",
+									"value": "authorizationAdminToken",
 									"type": "string"
 								}
 							]
@@ -356,7 +356,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"movieId\" : 53,\r\n    \"movieHallId\" : 1,\r\n    \"price\" : 100\r\n}",
+							"raw": "{\r\n    \"movieId\" : 1,\r\n    \"movieHallId\" : 1,\r\n    \"price\" : 100\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -466,7 +466,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlRpdGFuQ2luZW1hIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn1dLCJpYXQiOjE2OTMyMzM2MDYsImV4cCI6MTY5MzMyMDAwNn0.46S-DaMqHwwMFjlBm19YtKOo_alGQLmBy4eRpd0qu3r_DvgZjbQBTDFnCl5AOngziw9vpnyp42BUL5aVyhyDOw",
+									"value": "authorizationAdminToken",
 									"type": "string"
 								}
 							]
@@ -498,7 +498,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlRpdGFuQ2luZW1hIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn1dLCJpYXQiOjE2OTMyMzM2MDYsImV4cCI6MTY5MzMyMDAwNn0.46S-DaMqHwwMFjlBm19YtKOo_alGQLmBy4eRpd0qu3r_DvgZjbQBTDFnCl5AOngziw9vpnyp42BUL5aVyhyDOw",
+									"value": "authorizationAdminToken",
 									"type": "string"
 								}
 							]
@@ -507,7 +507,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"startsAt\" : \"2023-12-22T18:45:00\",\r\n    \"movieId\" : 53,\r\n    \"movieHallId\" : 1\r\n}",
+							"raw": "{\r\n    \"startsAt\" : \"2023-12-22T18:45:00\",\r\n    \"movieId\" : 1,\r\n    \"movieHallId\" : 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -577,7 +577,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlRpdGFuQ2luZW1hIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn1dLCJpYXQiOjE2OTM0MzA3MDQsImV4cCI6MTY5MzUxNzEwNH0.cgwbOqvUY1ELl7_I78g5FmoilYO94l9r38cWG9JOo3_Lj2BqxLqVOTf8PB0FDJj0RI99RRgkKOXL0nxdpyqMOw",
+									"value": "authorizationAdminToken",
 									"type": "string"
 								}
 							]
@@ -609,7 +609,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaGVwZWx2b3ZhMTUwODIwMDNAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiQURNSU4ifV0sImlhdCI6MTY5MzE1NzI1NiwiZXhwIjoxNjkzMjQzNjU2fQ.bhLOmFPW-PQ_tKv6RJQhLovpdOGj8SAhXY7CwuncRlbDzBA02uCzbL0jaSp9MkluAP_XnVN5GtwdT24ZJfXEsg",
+									"value": "authorizationAdminToken",
 									"type": "string"
 								}
 							]
@@ -647,7 +647,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxsY29udHJvbDEzMzdAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiVVNFUiJ9XSwiaWF0IjoxNjkzMjQxMDM4LCJleHAiOjE2OTMzMjc0Mzh9.WZY0rQsWSYeYtsWRcURWH3Ixpgg9TgQtMkU9LvNnOROnUm7X_rKD6HK8GzqPDcI7rsj0sQeuJruyFszB5ujXuA",
+									"value": "authorizationUserToken",
 									"type": "string"
 								}
 							]
@@ -684,7 +684,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxsY29udHJvbDEzMzdAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiVVNFUiJ9XSwiaWF0IjoxNjkzMTU2ODAyLCJleHAiOjE2OTMyNDMyMDJ9.U0udkIjR87GOIYi6ya8GB3hIa3clKW-Qn4DlAvtaR_IEwIFiOP0g5JpqLifeuwg6DRB2-5x78LKBCuj78N8jxA",
+									"value": "authorizationUserToken",
 									"type": "string"
 								}
 							]
@@ -715,7 +715,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxsY29udHJvbDEzMzdAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiVVNFUiJ9XSwiaWF0IjoxNjkzMjQxMDM4LCJleHAiOjE2OTMzMjc0Mzh9.WZY0rQsWSYeYtsWRcURWH3Ixpgg9TgQtMkU9LvNnOROnUm7X_rKD6HK8GzqPDcI7rsj0sQeuJruyFszB5ujXuA",
+									"value": "authorizationUserToken",
 									"type": "string"
 								}
 							]
@@ -724,7 +724,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"bookingDTOList\" : [\r\n    \r\n    {\r\n        \"seatId\": 3,\r\n        \"movieSessionId\": 2\r\n    },\r\n\r\n    {\r\n        \"seatId\": 4,\r\n        \"movieSessionId\": 2\r\n    }\r\n    ]\r\n}\r\n\r\n\r\n",
+							"raw": "{\r\n    \"bookingDTOList\" : [\r\n    \r\n    {\r\n        \"seatId\": 1,\r\n        \"movieSessionId\": 1\r\n    },\r\n\r\n    {\r\n        \"seatId\": 2,\r\n        \"movieSessionId\": 1\r\n    }\r\n    ]\r\n}\r\n\r\n\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -755,7 +755,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxsY29udHJvbDEzMzdAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiVVNFUiJ9XSwiaWF0IjoxNjkzMTU2ODAyLCJleHAiOjE2OTMyNDMyMDJ9.U0udkIjR87GOIYi6ya8GB3hIa3clKW-Qn4DlAvtaR_IEwIFiOP0g5JpqLifeuwg6DRB2-5x78LKBCuj78N8jxA",
+									"value": "authorizationUserToken",
 									"type": "string"
 								}
 							]
@@ -786,7 +786,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxsY29udHJvbDEzMzdAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiVVNFUiJ9XSwiaWF0IjoxNjkzMjQxMDM4LCJleHAiOjE2OTMzMjc0Mzh9.WZY0rQsWSYeYtsWRcURWH3Ixpgg9TgQtMkU9LvNnOROnUm7X_rKD6HK8GzqPDcI7rsj0sQeuJruyFszB5ujXuA",
+									"value": "authorizationUserToken",
 									"type": "string"
 								}
 							]
@@ -817,7 +817,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxsY29udHJvbDEzMzdAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiVVNFUiJ9XSwiaWF0IjoxNjkzMjQxMDM4LCJleHAiOjE2OTMzMjc0Mzh9.WZY0rQsWSYeYtsWRcURWH3Ixpgg9TgQtMkU9LvNnOROnUm7X_rKD6HK8GzqPDcI7rsj0sQeuJruyFszB5ujXuA",
+									"value": "authorizationUserToken",
 									"type": "string"
 								}
 							]
@@ -854,7 +854,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlRpdGFuQ2luZW1hIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn1dLCJpYXQiOjE2OTMyMzI4MjMsImV4cCI6MTY5MzMxOTIyM30.F2hZCsUpktPHb3g9A8x4hHilhIkecuLksA18wBQ7dbrmAqnSzZyMyYOGsQM1ILWfLxzAxVPxLcTvF3wgXsBErw",
+									"value": "authorizationToken",
 									"type": "string"
 								}
 							]
