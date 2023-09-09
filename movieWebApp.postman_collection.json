@@ -1,0 +1,981 @@
+{
+	"info": {
+		"_postman_id": "fcc99421-7770-49ab-b6b7-fc97e4a5fcf9",
+		"name": "movieWebApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28843641"
+	},
+	"item": [
+		{
+			"name": "RegistrationAuthentication",
+			"item": [
+				{
+					"name": "registrationRequest",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"John\",\r\n    \"lastName\":\"Watson\",\r\n    \"email\":\"example@gmail.com\",\r\n    \"password\":\"P@ssw0rd123!\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/registration/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"registration",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authenticationAdmin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"admin\",\r\n    \"password\" : \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/authentication/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"authentication",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authenticationUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"fullcontrol1337@gmail.com\",\r\n    \"password\" : \"NarutoUzumaki123!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/authentication/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"authentication",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movieAdmin",
+			"item": [
+				{
+					"name": "addMovie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movieTitle\" : \"The Shawshank Redemption\",\r\n    \"movieDuration\" : 150,\r\n    \"movieDescription\" : \"The Shawshank Redemption is a 1994 American prison drama film written and directed by Frank Darabont, based on the 1982 Stephen King novella Rita Hayworth and Shawshank Redemption. The film tells the story of banker Andy Dufresne (Tim Robbins), who is sentenced to life in Shawshank State Penitentiary for the murders of his wife and her lover, despite his claims of innocence. \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/movie/addMovie",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"movie",
+								"addMovie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeMovie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlRpdGFuQ2luZW1hIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn1dLCJpYXQiOjE2OTMyMzM2MDYsImV4cCI6MTY5MzMyMDAwNn0.46S-DaMqHwwMFjlBm19YtKOo_alGQLmBy4eRpd0qu3r_DvgZjbQBTDFnCl5AOngziw9vpnyp42BUL5aVyhyDOw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/movie/removeMovie/52",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"movie",
+								"removeMovie",
+								"52"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMovie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaGVwZWx2b3ZhMTUwODIwMDNAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiQURNSU4ifV0sImlhdCI6MTY5MzE1NjAwNywiZXhwIjoxNjkzMjQyNDA3fQ.A8YoWeXixx-HfSWkFU035nOzkn9ejLgjuwfxvBtcEmjd9E3ldtgTDAUB1wqFCAf7V7s5rL1vPipURcb4DDaz-Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movieTitle\" : \"Barbie\",\r\n    \"movieDescription\" : \"Everything pink\",\r\n    \"movieDuration\" : 165\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/movie/updateMovie/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"movie",
+								"updateMovie",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movieHallAdmin",
+			"item": [
+				{
+					"name": "getAllMovieHalls",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/movieHall/getAllMovieHalls",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"movieHall",
+								"getAllMovieHalls"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addMovieHall",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movieHallCapacity\" : 100,\r\n    \"movieHallDescription\" : \"Welcome to the Movie Hall of the Future, where the magic of cinema meets cutting-edge technology to transport you to a world of immersive entertainment. Step into a realm where every aspect of your cinematic experience is redefined.\",\r\n    \"movieHallNumber\" : 1,\r\n    \"seatsPerRow\" : 10\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/movieHall/addMovieHall",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"movieHall",
+								"addMovieHall"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeMovieHall",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaGVwZWx2b3ZhMTUwODIwMDNAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiQURNSU4ifV0sImlhdCI6MTY5MzE1NjAwNywiZXhwIjoxNjkzMjQyNDA3fQ.A8YoWeXixx-HfSWkFU035nOzkn9ejLgjuwfxvBtcEmjd9E3ldtgTDAUB1wqFCAf7V7s5rL1vPipURcb4DDaz-Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/movieHall/removeMovieHall/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"movieHall",
+								"removeMovieHall",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "seatPricingAdmin",
+			"item": [
+				{
+					"name": "setSeatingPrice",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlRpdGFuQ2luZW1hIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn1dLCJpYXQiOjE2OTMyMzM2MDYsImV4cCI6MTY5MzMyMDAwNn0.46S-DaMqHwwMFjlBm19YtKOo_alGQLmBy4eRpd0qu3r_DvgZjbQBTDFnCl5AOngziw9vpnyp42BUL5aVyhyDOw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movieId\" : 53,\r\n    \"movieHallId\" : 1,\r\n    \"price\" : 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/seatPricing/setUpThePrice",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"seatPricing",
+								"setUpThePrice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllSeatPrices",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlRpdGFuQ2luZW1hIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn1dLCJpYXQiOjE2OTMyMzM2MDYsImV4cCI6MTY5MzMyMDAwNn0.46S-DaMqHwwMFjlBm19YtKOo_alGQLmBy4eRpd0qu3r_DvgZjbQBTDFnCl5AOngziw9vpnyp42BUL5aVyhyDOw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/seatPricing/getAllSeatPrices",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"seatPricing",
+								"getAllSeatPrices"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateSeatPricing",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlRpdGFuQ2luZW1hIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn1dLCJpYXQiOjE2OTMyMzM2MDYsImV4cCI6MTY5MzMyMDAwNn0.46S-DaMqHwwMFjlBm19YtKOo_alGQLmBy4eRpd0qu3r_DvgZjbQBTDFnCl5AOngziw9vpnyp42BUL5aVyhyDOw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"movieId\" : 52,\r\n    \"movieHallId\" : 1,\r\n    \"price\" : 300\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/seatPricing/updateTheSeatPrice",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"seatPricing",
+								"updateTheSeatPrice"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "movieSessionAdmin",
+			"item": [
+				{
+					"name": "getAllMovieSessions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlRpdGFuQ2luZW1hIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn1dLCJpYXQiOjE2OTMyMzM2MDYsImV4cCI6MTY5MzMyMDAwNn0.46S-DaMqHwwMFjlBm19YtKOo_alGQLmBy4eRpd0qu3r_DvgZjbQBTDFnCl5AOngziw9vpnyp42BUL5aVyhyDOw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/movieSession/getAllMovieSessions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"movieSession",
+								"getAllMovieSessions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addMovieSession",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlRpdGFuQ2luZW1hIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn1dLCJpYXQiOjE2OTMyMzM2MDYsImV4cCI6MTY5MzMyMDAwNn0.46S-DaMqHwwMFjlBm19YtKOo_alGQLmBy4eRpd0qu3r_DvgZjbQBTDFnCl5AOngziw9vpnyp42BUL5aVyhyDOw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"startsAt\" : \"2023-12-22T18:45:00\",\r\n    \"movieId\" : 53,\r\n    \"movieHallId\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/admin/movieSession/addSession",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"movieSession",
+								"addSession"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeMovieSession",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaGVwZWx2b3ZhMTUwODIwMDNAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiQURNSU4ifV0sImlhdCI6MTY5MzE1NjAwNywiZXhwIjoxNjkzMjQyNDA3fQ.A8YoWeXixx-HfSWkFU035nOzkn9ejLgjuwfxvBtcEmjd9E3ldtgTDAUB1wqFCAf7V7s5rL1vPipURcb4DDaz-Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/movieSession/removeSession/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"movieSession",
+								"removeSession",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ManageUsersAdmin",
+			"item": [
+				{
+					"name": "getAllUsers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlRpdGFuQ2luZW1hIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn1dLCJpYXQiOjE2OTM0MzA3MDQsImV4cCI6MTY5MzUxNzEwNH0.cgwbOqvUY1ELl7_I78g5FmoilYO94l9r38cWG9JOo3_Lj2BqxLqVOTf8PB0FDJj0RI99RRgkKOXL0nxdpyqMOw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/userManager/getAllUsers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"userManager",
+								"getAllUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "giveAdminRights",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaGVwZWx2b3ZhMTUwODIwMDNAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiQURNSU4ifV0sImlhdCI6MTY5MzE1NzI1NiwiZXhwIjoxNjkzMjQzNjU2fQ.bhLOmFPW-PQ_tKv6RJQhLovpdOGj8SAhXY7CwuncRlbDzBA02uCzbL0jaSp9MkluAP_XnVN5GtwdT24ZJfXEsg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/admin/userManager/giveAdminRights/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"admin",
+								"userManager",
+								"giveAdminRights",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reservationUser",
+			"item": [
+				{
+					"name": "getAvailableSeats",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxsY29udHJvbDEzMzdAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiVVNFUiJ9XSwiaWF0IjoxNjkzMjQxMDM4LCJleHAiOjE2OTMzMjc0Mzh9.WZY0rQsWSYeYtsWRcURWH3Ixpgg9TgQtMkU9LvNnOROnUm7X_rKD6HK8GzqPDcI7rsj0sQeuJruyFszB5ujXuA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/getAvailableSeats?movieSessionId=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"getAvailableSeats"
+							],
+							"query": [
+								{
+									"key": "movieSessionId",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getReservations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxsY29udHJvbDEzMzdAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiVVNFUiJ9XSwiaWF0IjoxNjkzMTU2ODAyLCJleHAiOjE2OTMyNDMyMDJ9.U0udkIjR87GOIYi6ya8GB3hIa3clKW-Qn4DlAvtaR_IEwIFiOP0g5JpqLifeuwg6DRB2-5x78LKBCuj78N8jxA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/getReservations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"getReservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reserveSeat",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxsY29udHJvbDEzMzdAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiVVNFUiJ9XSwiaWF0IjoxNjkzMjQxMDM4LCJleHAiOjE2OTMzMjc0Mzh9.WZY0rQsWSYeYtsWRcURWH3Ixpgg9TgQtMkU9LvNnOROnUm7X_rKD6HK8GzqPDcI7rsj0sQeuJruyFszB5ujXuA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookingDTOList\" : [\r\n    \r\n    {\r\n        \"seatId\": 3,\r\n        \"movieSessionId\": 2\r\n    },\r\n\r\n    {\r\n        \"seatId\": 4,\r\n        \"movieSessionId\": 2\r\n    }\r\n    ]\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/user/reserveSeats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"reserveSeats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancelAllReservations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxsY29udHJvbDEzMzdAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiVVNFUiJ9XSwiaWF0IjoxNjkzMTU2ODAyLCJleHAiOjE2OTMyNDMyMDJ9.U0udkIjR87GOIYi6ya8GB3hIa3clKW-Qn4DlAvtaR_IEwIFiOP0g5JpqLifeuwg6DRB2-5x78LKBCuj78N8jxA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/cancelAllReservations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"cancelAllReservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "purchaseTicket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxsY29udHJvbDEzMzdAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiVVNFUiJ9XSwiaWF0IjoxNjkzMjQxMDM4LCJleHAiOjE2OTMzMjc0Mzh9.WZY0rQsWSYeYtsWRcURWH3Ixpgg9TgQtMkU9LvNnOROnUm7X_rKD6HK8GzqPDcI7rsj0sQeuJruyFszB5ujXuA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/purchaseTicket",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"purchaseTicket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getTicketById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmdWxsY29udHJvbDEzMzdAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiVVNFUiJ9XSwiaWF0IjoxNjkzMjQxMDM4LCJleHAiOjE2OTMzMjc0Mzh9.WZY0rQsWSYeYtsWRcURWH3Ixpgg9TgQtMkU9LvNnOROnUm7X_rKD6HK8GzqPDcI7rsj0sQeuJruyFszB5ujXuA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/user/getTicket/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"getTicket",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "passwordManager",
+			"item": [
+				{
+					"name": "changePassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlzcyI6IlRpdGFuQ2luZW1hIiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IkFETUlOIn1dLCJpYXQiOjE2OTMyMzI4MjMsImV4cCI6MTY5MzMxOTIyM30.F2hZCsUpktPHb3g9A8x4hHilhIkecuLksA18wBQ7dbrmAqnSzZyMyYOGsQM1ILWfLxzAxVPxLcTvF3wgXsBErw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\" : \"password\",\r\n    \"newPassword\" : \"Rasenshur1ken!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/passwordManager/changePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"passwordManager",
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "unauthorizedUser",
+			"item": [
+				{
+					"name": "filterMovieSessions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/getMovieSessions?date=2023-12-22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"getMovieSessions"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "date",
+									"value": "2023-12-22"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllMovies",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzaGVwZWx2b3ZhMTUwODIwMDNAZ21haWwuY29tIiwiaXNzIjoiVGl0YW5DaW5lbWEiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiQURNSU4ifV0sImlhdCI6MTY5Mjk2OTk0MSwiZXhwIjoxNjkzMDU2MzQxfQ.mqs0cMy_TIQ1M16BH5NbmTnBIF8iE0pv_ZxDELz6Uh1nDUm-p55nwTHuSUK2namBBGEvneE8uOIWsxGVaaDvWA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/getAllMovies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"getAllMovies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllMovies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/public/getAllMovies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"public",
+								"getAllMovies"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
